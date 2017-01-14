@@ -66,7 +66,7 @@ public class ShellExplosion : MonoBehaviour
 
 		float damage = relativeDistance * m_MaxDamage;
 
-		damage = Mathf.Max (damage, m_MaxDamage);
+		if(damage < 0) Mathf.Max (damage, m_MaxDamage);
 
 		return damage;
     }

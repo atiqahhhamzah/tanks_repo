@@ -4681,10 +4681,20 @@ extern "C"  float ShellExplosion_CalculateDamage_m2629024124 (ShellExplosion_t44
 		float L_9 = __this->get_m_MaxDamage_5();
 		V_3 = ((float)((float)L_8*(float)L_9));
 		float L_10 = V_3;
-		float L_11 = __this->get_m_MaxDamage_5();
+		if ((!(((float)L_10) < ((float)(0.0f)))))
+		{
+			goto IL_004b;
+		}
+	}
+	{
+		float L_11 = V_3;
+		float L_12 = __this->get_m_MaxDamage_5();
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t2336485820_il2cpp_TypeInfo_var);
-		float L_12 = Mathf_Max_m2564622569(NULL /*static, unused*/, L_10, L_11, /*hidden argument*/NULL);
-		V_3 = L_12;
+		Mathf_Max_m2564622569(NULL /*static, unused*/, L_11, L_12, /*hidden argument*/NULL);
+	}
+
+IL_004b:
+	{
 		float L_13 = V_3;
 		return L_13;
 	}
